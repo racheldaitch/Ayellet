@@ -22,7 +22,8 @@ namespace Ayellet.Controllers
             }
             catch (Exception ex)
             {
-               throw ErrorManager.OnError(new Exception(string.Format("Exception occurred at {0}: {1}", Request.Path, ex.ToString())));
+                ErrorManager.OnError(new Exception(string.Format("Exception occurred at {0}: {1}", Request.Path, ex.ToString())));
+                return BadRequest(ex.ToString());
             }
         }
     }

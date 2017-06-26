@@ -7,10 +7,9 @@ namespace Ayellet.Bl
 {
     public class ErrorManager
     {
-        public static Exception OnError(Exception ex)
+        public static void OnError(Exception ex)
         {
             Debug.WriteLine(ex.ToString());
-            return ex;
         }
     }
 }
